@@ -4,13 +4,13 @@ import java.util.*;
 
 public class Inventario {
 
-    private int CAPACIDAD_MAXIMA = 200;
-    Producto[] inventario = new Producto[CAPACIDAD_MAXIMA];
+    private int CMax = 200;
+    Producto[] inventario = new Producto[CMax];
     private int contador = 0;
     Scanner scanner = new Scanner(System.in);
 
     public void agregarProducto() {
-        if (contador < CAPACIDAD_MAXIMA) {
+        if (contador < CMax) {
             System.out.print("Ingrese el codigo del producto: ");
             String codigo = scanner.nextLine();
             System.out.print("Ingrese el nombre del producto: ");
