@@ -1,14 +1,13 @@
 package papeleria;
 
-import java.util.Arrays;
-import java.util.Scanner;
+import java.util.*;
 
 public class Inventario {
 
-    private int CAPACIDAD_MAXIMA = 100;
-    private Producto[] inventario = new Producto[CAPACIDAD_MAXIMA];
-    private int contador = 0;
-    private Scanner scanner = new Scanner(System.in);
+    int CAPACIDAD_MAXIMA = 100;
+    Producto[] inventario = new Producto[CAPACIDAD_MAXIMA];
+    int contador = 0;
+    Scanner scanner = new Scanner(System.in);
 
     public void agregarProducto() {
         if (contador < CAPACIDAD_MAXIMA) {
@@ -45,7 +44,7 @@ public class Inventario {
             }
         }
     }
-    
+
     public void eliminarProducto() {
         System.out.print("Ingrese el codigo del producto a eliminar: ");
         String codigo = scanner.nextLine();
@@ -72,10 +71,10 @@ public class Inventario {
         for (int i = 0; i < contador; i++) {
             if (inventario[i] != null && inventario[i].getCodigo().equals(codigo)) {
                 Producto producto = inventario[i];
-                System.out.println("Producto encontrado - Codigo: " + producto.getCodigo() +
-                        ", Nombre: " + producto.getNombre() +
-                        ", Precio: " + producto.obtenerPrecio() +
-                        ", Cantidad: " + producto.getCantidad());
+                System.out.println("Producto encontrado - Codigo: " + producto.getCodigo()
+                        + ", Nombre: " + producto.getNombre()
+                        + ", Precio: " + producto.obtenerPrecio()
+                        + ", Cantidad: " + producto.getCantidad());
                 return;
             }
         }
