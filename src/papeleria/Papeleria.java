@@ -9,7 +9,7 @@ public class Papeleria {
 
         while (true) {
             mostrarMenu();
-            int opcion = scanner.nextInt();
+            private int opcion = scanner.nextInt();
             scanner.nextLine();
             switch (opcion) {
                 case 1:

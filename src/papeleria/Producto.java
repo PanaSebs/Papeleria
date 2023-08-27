@@ -2,10 +2,10 @@ package papeleria;
 
 public class Producto {
 
-    String codigo;
-    String nombre;
-    double precio;
-    int cantidad;
+    private String codigo;
+    private String nombre;
+    private double precio;
+    private int cantidad;
 
     public Producto(String codigo, String nombre, double precio, int cantidad) {
         this.codigo = codigo;
@@ -22,7 +22,7 @@ public class Producto {
         return nombre;
     }
 
-    public double obtenerPrecio() {
+    public double getPrecio() {
         return precio;
     }
 
