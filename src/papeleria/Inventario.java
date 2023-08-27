@@ -4,9 +4,9 @@ import java.util.*;
 
 public class Inventario {
 
-    int CAPACIDAD_MAXIMA = 200;
+    private int CAPACIDAD_MAXIMA = 200;
     Producto[] inventario = new Producto[CAPACIDAD_MAXIMA];
-    int contador = 0;
+    private int contador = 0;
     Scanner scanner = new Scanner(System.in);
 
     public void agregarProducto() {
