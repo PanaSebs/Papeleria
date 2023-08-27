@@ -38,7 +38,7 @@ public class Inventario {
                 if (producto != null) {
                     System.out.println("Codigo: " + producto.getCodigo()
                             + ", Nombre: " + producto.getNombre()
-                            + ", Precio: " + producto.obtenerPrecio()
+                            + ", Precio: " + producto.getPrecio()
                             + ", Cantidad: " + producto.getCantidad());
                 }
             }
@@ -73,7 +73,7 @@ public class Inventario {
                 Producto producto = inventario[i];
                 System.out.println("Producto encontrado - Codigo: " + producto.getCodigo()
                         + ", Nombre: " + producto.getNombre()
-                        + ", Precio: " + producto.obtenerPrecio()
+                        + ", Precio: " + producto.getPrecio()
                         + ", Cantidad: " + producto.getCantidad());
                 return;
             }
