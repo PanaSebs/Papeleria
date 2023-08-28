@@ -27,6 +27,9 @@ public class Papeleria {
                         inventario.buscarProducto();
                         break;
                     case 5:
+                        inventario.actualizarProducto();
+                        break;
+                    case 6:
                         scanner.close();
                         System.exit(0);
                     default:
@@ -44,7 +47,8 @@ public class Papeleria {
         System.out.println("2. Mostrar Inventario");
         System.out.println("3. Eliminar Producto");
         System.out.println("4. Buscar Producto");
-        System.out.println("5. Salir");
+        System.out.println("5. Actualizar Producto");     
+        System.out.println("6. Salir");
         System.out.print("Seleccione una opción: ");
     }
 }
