@@ -120,32 +120,24 @@ public class Inventario {
             for (int i = 0; i < contador; i++) {
                 if (inventario[i] != null && inventario[i].getCodigo().equals(codigo)) {
                     Producto producto = inventario[i];
-                    System.out.println("Producto encontrado - Código: " + producto.getCodigo()
-                            + ", Nombre: " + producto.getNombre()
+                    System.out.println("Producto encontrado - Código: " + producto.getCodigo()                            
                             + ", Precio: " + producto.getPrecio()
                             + ", Cantidad: " + producto.getCantidad());
 
-                    System.out.println("Seleccione qué atributo desea actualizar:");
-                    System.out.println("1. Nombre");
-                    System.out.println("2. Precio");
-                    System.out.println("3. Cantidad");
+                    System.out.println("Seleccione qué atributo desea actualizar:");                    
+                    System.out.println("1. Precio");
+                    System.out.println("2. Cantidad");
                     int opcion = scanner.nextInt();
                     scanner.nextLine();
 
                     switch (opcion) {
                         case 1:
-                            System.out.print("Ingrese el nuevo nombre del producto: ");
-                            String nuevoNombre = scanner.nextLine();
-                            producto.setNombre(nuevoNombre);
-                            System.out.println("Nombre actualizado con éxito.");
-                            break;
-                        case 2:
                             System.out.print("Ingrese el nuevo precio del producto: ");
                             double nuevoPrecio = scanner.nextDouble();
                             producto.setPrecio(nuevoPrecio);
                             System.out.println("Precio actualizado con éxito.");
                             break;
-                        case 3:
+                        case 2:
                             System.out.print("Ingrese la nueva cantidad del producto: ");
                             int nuevaCantidad = scanner.nextInt();
                             producto.setCantidad(nuevaCantidad);
