@@ -3,6 +3,7 @@ package papeleria;
 import java.util.Scanner;
 
 public class Papeleria {
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Inventario inventario = new Inventario();
@@ -33,10 +34,10 @@ public class Papeleria {
                         scanner.close();
                         System.exit(0);
                     default:
-                        System.out.println("Por favor, seleccione una opción válida.");
+                        System.out.println("Opción inválida.");
                 }
             } catch (Exception e) {
-                System.out.println("Ha ocurrido un error. Asegúrese de ingresar datos válidos.");
+                System.out.println("Ha ocurrido un error: " + e.getMessage());
                 scanner.nextLine();
             }
         }
@@ -47,7 +48,7 @@ public class Papeleria {
         System.out.println("2. Mostrar Inventario");
         System.out.println("3. Eliminar Producto");
         System.out.println("4. Buscar Producto");
-        System.out.println("5. Actualizar Producto");     
+        System.out.println("5. Actualizar Producto");
         System.out.println("6. Salir");
         System.out.print("Seleccione una opción: ");
     }

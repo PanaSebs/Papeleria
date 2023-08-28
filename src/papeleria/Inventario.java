@@ -37,20 +37,25 @@ public class Inventario {
     public void mostrarInventario() {
         if (contador == 0) {
             System.out.println("No hay productos en el inventario. Agregue productos primero.");
-        } else {
-            for (int i = 0; i < contador; i++) {
-                Producto producto = inventario[i];
-                if (producto != null) {
-                    System.out.println("Codigo: " + producto.getCodigo()
-                            + ", Nombre: " + producto.getNombre()
-                            + ", Precio: " + producto.getPrecio()
-                            + ", Cantidad: " + producto.getCantidad());
-                }
-            }
+            return;
+        }
+
+        System.out.println("Inventario de la papelería:");
+        for (int i = 0; i < contador; i++) {
+            Producto producto = inventario[i];
+            System.out.println("Código: " + producto.getCodigo()
+                    + ", Nombre: " + producto.getNombre()
+                    + ", Precio: " + producto.getPrecio()
+                    + ", Cantidad: " + producto.getCantidad());
         }
     }
 
     public void eliminarProducto() {
+        if (contador == 0) {
+            System.out.println("No hay productos en el inventario. Agregue productos primero.");
+            return;
+        }
+
         try {
             System.out.print("Ingrese el código del producto a eliminar: ");
             String codigo = scanner.nextLine();
@@ -75,6 +80,11 @@ public class Inventario {
     }
 
     public void buscarProducto() {
+        if (contador == 0) {
+            System.out.println("No hay productos en el inventario. Agregue productos primero.");
+            return;
+        }
+
         try {
             System.out.print("Ingrese el código del producto a buscar: ");
             String codigo = scanner.nextLine();
@@ -98,6 +108,11 @@ public class Inventario {
     }
 
     public void actualizarProducto() {
+        if (contador == 0) {
+            System.out.println("No hay productos en el inventario. Agregue productos primero.");
+            return;
+        }
+
         try {
             System.out.print("Ingrese el código del producto a actualizar: ");
             String codigo = scanner.nextLine();
